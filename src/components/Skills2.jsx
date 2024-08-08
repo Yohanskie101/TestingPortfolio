@@ -22,27 +22,30 @@ gsap.registerPlugin(ScrollTrigger);
 
 const Skills2 = () => {
   useEffect(() => {
-    // Create the ScrollTrigger and animation when the component mounts
-    const trigger = ScrollTrigger.create({
-      trigger: ".wrapper-404",
-      start: "top top",
-      end: "+900vh",
-      scrub: 1,
-      pin: true,
-      onUpdate: (self) => {
-        gsap.to(".wrapper-404", {
-          x: `${-150 * self.progress}vw`,
-          duration: 0.5,
-          ease: "power3.out",
-        });
-      },
-    });
+    // Check if the screen width is greater than 768px
+    if (window.innerWidth > 768) {
+      // Create the ScrollTrigger and animation when the component mounts
+      const trigger = ScrollTrigger.create({
+        trigger: ".wrapper-404",
+        start: "top top",
+        end: "+900vh",
+        scrub: 1,
+        pin: true,
+        onUpdate: (self) => {
+          gsap.to(".wrapper-404", {
+            x: `${-150 * self.progress}vw`,
+            duration: 0.5,
+            ease: "power3.out",
+          });
+        },
+      });
 
-    // Clean up all ScrollTriggers on component unmount
-    return () => {
-      trigger.kill();
-      ScrollTrigger.getAll().forEach((st) => st.kill());
-    };
+      // Clean up all ScrollTriggers on component unmount
+      return () => {
+        trigger.kill();
+        ScrollTrigger.getAll().forEach((st) => st.kill());
+      };
+    }
   }, []);
 
   return (
