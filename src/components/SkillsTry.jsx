@@ -2,7 +2,7 @@ import React from "react";
 
 const SkillsTry = () => {
   return (
-    <div className="grid xl:grid-cols-[28%,62%] lg:w-[50%]  w-full h-fit mb-10">
+    <div className="grid xl:grid-cols-[28%,62%] lg:w-[30%]  w-full h-fit mb-10">
       <div className="flex flex-row">
         <div className="flex flex-col">
           <span className="font-for-intro-2 font-semibold">"</span>
