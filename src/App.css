@@ -328,6 +328,9 @@ body {
   .skills2-container {
     width: 100% !important;
   }
+  .skills-text {
+    text-align: center !important;
+  }
 }
 
 @media (max-width: 640px) {

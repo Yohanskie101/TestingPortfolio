@@ -48,7 +48,7 @@ const Skills2 = () => {
   return (
     <div className="skills2-container relative ">
       <section className="wrapper-404 lg:pt-40">
-        <div className="font-for-intro relative block">Skills</div>
+        <div className="skills-text font-for-intro relative block">Skills</div>
         <div className="wrapper-container flex gap-10">
           {/* 1st Box */}
           <div className="flex flex-col items-center font-for-intro-2 font-semibold">
