@@ -31,7 +31,7 @@ function Profile() {
           <WhoIsYohan />
         </div>
         <div id="Skills">
-          {/* <Skills /> */}
+          <Skills />
           <Skills2 />
         </div>
         <div id="Projects">
