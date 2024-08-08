@@ -277,12 +277,6 @@ body {
     justify-content: center;
     align-items: center;
   }
-  .wrapper-container {
-    display: block !important;
-  }
-  .wrapper-404 {
-    width: max-content !important;
-  }
 }
 @media (max-width: 1024px) {
   .container {
@@ -321,6 +315,18 @@ body {
   .font-for-intro-2 {
     font-size: 2.5rem;
     line-height: 1.2;
+  }
+  .wrapper-container {
+    display: block !important;
+  }
+  .wrapper-404 {
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    width: 100% !important;
+  }
+  .skills2-container {
+    width: 100% !important;
   }
 }
 

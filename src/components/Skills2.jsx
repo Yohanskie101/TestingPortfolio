@@ -46,7 +46,7 @@ const Skills2 = () => {
   }, []);
 
   return (
-    <div className="skills2-container container relative">
+    <div className="skills2-container  relative ">
       <section className="wrapper-404">
         <SkillsTry />
         <div className="font-for-intro relative block">Skills</div>
