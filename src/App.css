@@ -1,0 +1,419 @@
+@import url("https://fonts.googleapis.com/css2?family=Druke+Wide&display=swap");
+
+@font-face {
+  font-family: "Druk Wide Bold Bold";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Druk Wide Bold Bold"), url("DrukWideBold.woff") format("woff");
+}
+
+@font-face {
+  font-family: "WfSemibold";
+  src: url("/src/WfSemibold.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "WfRegular";
+  src: url("/src/WfRegular.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+.name-logo {
+  font-family: "Druke Wide", sans-serif;
+}
+
+.home-body {
+  background-color: #000;
+  width: 100%;
+}
+.first-footer-div {
+  height: 9rem;
+}
+.container {
+  max-width: 1280px !important;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  height: 100%;
+  /* border: 1px solid ; */
+}
+
+.Hover-Section-Container {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+}
+
+.name-logo {
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+}
+
+.logo-container:hover .name-logo {
+  color: transparent;
+  -webkit-text-stroke: 1px white;
+}
+.font-for-intro {
+  font-size: 4.2rem;
+  line-height: 1.2;
+  font-family: "WfSemibold", sans-serif;
+}
+
+.font-for-intro-2 {
+  font-size: 3.2rem;
+  line-height: 1.2;
+  font-family: "WfSemibold", sans-serif;
+}
+.heading-project,
+.sub-heading-project,
+.read-heading-project {
+  font-family: "WfSemibold", sans-serif;
+}
+.sub-heading-project {
+  color: #6b6b6b;
+}
+.Project-img-cont {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 40px;
+  overflow: hidden;
+  transition: 1s ease;
+}
+.btn-modal-footer {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+.Project-img-cont img {
+  border-radius: 40px;
+  transition: 0.8s ease;
+}
+
+.Project-img-cont img:hover {
+  transform: scale(0.97);
+}
+.WhoIsYohan-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.Full-description-container {
+  width: 682px;
+  /* border: 1px solid; */
+}
+/* .MyFooter-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+} */
+
+.carousel {
+  position: relative;
+  overflow: hidden;
+}
+
+.carousel-item {
+  position: absolute;
+  width: 100%;
+  transition: transform 0.5s ease-in-out;
+}
+
+.carousel-item.hidden {
+  display: none;
+}
+.blacky {
+  transition: all 0.3s ease;
+}
+
+.logo-container:hover .blacky {
+  color: transparent;
+  -webkit-text-stroke: 1px black;
+}
+.skills2-container {
+  height: 165vh;
+}
+.wrapper-404 {
+  position: relative;
+  top: 0;
+  width: 150vw;
+  height: 100vh;
+  will-change: transform;
+}
+
+.scrolled {
+  color: transparent;
+  -webkit-text-stroke: 1px black;
+}
+
+.text-custom-green {
+  color: #7dc172;
+}
+.image-grad-pic-container {
+  height: 432px;
+  width: 288px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.image-grad-pic {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+/* .img-modal {
+  border-radius: 70px;
+} */
+.My-full-name {
+  font-family: "Druke Wide", sans-serif;
+  font-family: "Druke Wide", sans-serif;
+  font-family: "Druke Wide", sans-serif;
+}
+.Hover-Section-Container > a:nth-of-type(1) {
+  transform: perspective(500px) rotateY(-30deg);
+  transition: 0.5s ease;
+}
+
+.Hover-Section-Container > a:nth-of-type(2) {
+  transform: perspective(500px) rotateY(-30deg);
+  transition: 0.5s ease;
+}
+
+.Hover-Section-Container > a:nth-of-type(3) {
+  transform: perspective(500px) rotateY(-30deg);
+  transition: 0.5s ease;
+}
+
+.Hover-Section-Container > a:nth-of-type(4) {
+  transform: perspective(500px) rotateY(-30deg);
+  transition: 0.5s ease;
+}
+
+.Hover-Section-Container > a:nth-of-type(5) {
+  transform: perspective(500px) rotateY(-30deg);
+  transition: 0.5s ease;
+}
+
+.Hover-Section-Container > a:hover {
+  transform: perspective(500px) rotateY(-15deg) scale(1.1);
+}
+
+.selection-text:hover {
+  color: transparent;
+  -webkit-text-stroke: 1px yellow;
+}
+
+.Title-Who {
+  color: #7dc172;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+}
+.char {
+  transform: translateY(115px);
+  transition: transform 0.5s;
+}
+.container-below {
+  display: flex;
+  align-items: center;
+  gap: 2%;
+}
+.container-btn-footer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-items: center;
+}
+.Container-cont {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-items: center;
+}
+.box-one-cont,
+.box-two-cont {
+  max-width: fit-content;
+  margin: 0;
+}
+/* transition */
+.slide-in {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: #0f0f0f;
+  transform-origin: left;
+  z-index: 20;
+}
+
+.slide-out {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: #0f0f0f;
+  transform-origin: bottom;
+  z-index: 20;
+}
+@media (max-width: 1536px) {
+  .container {
+    max-width: 1280px !important;
+  }
+}
+@media (max-width: 1280px) {
+  .container {
+    max-width: 1024px !important;
+  }
+  .WhoIsYohan-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .wrapper-container {
+    display: block !important;
+  }
+  .wrapper-404 {
+    width: max-content !important;
+  }
+}
+@media (max-width: 1024px) {
+  .container {
+    max-width: 768px !important;
+  }
+  .font-for-intro {
+    font-size: 4rem;
+    line-height: 1.2;
+  }
+
+  .font-for-intro-2 {
+    font-size: 3rem;
+    line-height: 1.2;
+  }
+  .WhoIsYohan-container {
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+  .image-grad-pic {
+    margin-top: 36px;
+  }
+  .MyFooter-first-container {
+    gap: 2rem !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    max-width: 640px !important;
+  }
+  .font-for-intro {
+    font-size: 3.5rem;
+    line-height: 1.2;
+  }
+
+  .font-for-intro-2 {
+    font-size: 2.5rem;
+    line-height: 1.2;
+  }
+}
+
+@media (max-width: 640px) {
+  /*Tablet*/
+  .container {
+    max-width: 475px !important;
+  }
+  .font-for-intro {
+    font-size: 2.5rem;
+    line-height: 1.2;
+  }
+
+  .font-for-intro-2 {
+    font-size: 1.5rem;
+    line-height: 1.2;
+  }
+
+  .MyFooter-first-container {
+    gap: 1rem !important;
+  }
+
+  .scale-btns {
+    font-size: 15px !important;
+  }
+  .first-footer-div,
+  .second-footer-div,
+  .third-footer-div {
+    font-size: 17px !important;
+  }
+
+  .fourth-footer-div {
+    font-size: 14px !important;
+  }
+}
+
+@media (max-width: 475px) {
+  .Full-description-container {
+    width: 100%;
+    position: relative;
+  }
+  .WhoIsYohan-container {
+    position: relative !important;
+    display: block !important;
+    text-align: center;
+  }
+  .image-grad-pic-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 300px;
+    margin-bottom: 5%;
+  }
+  .image-grad-pic {
+    display: block !important;
+    margin: 0 auto;
+  }
+  .container {
+    max-width: 475px !important;
+  }
+  .font-for-intro {
+    font-size: 2.5rem;
+    line-height: 1.2;
+  }
+
+  .font-for-intro-2 {
+    font-size: 1.5rem;
+    line-height: 1.2;
+  }
+  .image-grad-pic {
+    margin-top: 11px;
+  }
+  .MyFooter-first-container {
+    flex-wrap: wrap;
+    gap: 10px !important;
+  }
+  .first-footer-div {
+    height: 2rem !important;
+  }
+  .scale-btns {
+    font-size: 14px !important;
+  }
+  .first-footer-div,
+  .second-footer-div,
+  .third-footer-div {
+    font-size: 16px !important;
+  }
+  .fourth-footer-div {
+    margin-top: 10px !important;
+    font-size: 12px !important;
+  }
+  .Container-cont {
+    display: block;
+  }
+}
