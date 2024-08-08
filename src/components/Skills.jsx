@@ -2,7 +2,7 @@ import React from "react";
 
 const Skills = () => {
   return (
-    <div className="container grid lg:grid-cols-[65%,35%] text-center w-full h-fit gap-2 mt-40 2xl:mt-56 xl:mt-56 lg:mt-44 md:mt-40 sm:mt-40">
+    <div className="container grid lg:grid-cols-[65%,35%] text-center lg:text-left w-full h-fit gap-2 mt-40 2xl:mt-56 xl:mt-56 lg:mt-44 md:mt-40 sm:mt-40">
       <div className="flex flex-row">
         {/* <div className="flex flex-col">
           <span className="font-for-intro-2 font-semibold">"</span>
