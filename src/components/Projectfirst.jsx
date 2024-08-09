@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useRef, useEffect } from "react";
+import { useInView } from "framer-motion";
 import FirstProjectImg from "../assets/pj4-img.png";
 import lng1 from "../assets/php.png";
 import lng2 from "../assets/html-5.png";
@@ -9,6 +10,11 @@ import lng6 from "../assets/threejs.png";
 import lng7 from "../assets/bootstrap.png";
 
 function Projectfirst() {
+  //Framer project
+  const projectRef = useRef(null);
+
+  //Framer project
+  const isInViewProject = useInView(projectRef, { once: true });
   return (
     <>
       <div className="heading-project text-base xl:text-4xl lg:text-3xl sm:text-2xl leading-relaxed">
@@ -27,7 +33,15 @@ function Projectfirst() {
         </div>
       </div>
 
-      <div className="Project-img-cont w-full mb-5 h-1/2">
+      <div
+        className="Project-img-cont w-full mb-5 h-1/2"
+        ref={projectRef}
+        style={{
+          transform: isInViewProject ? "none" : "translateY(100px)",
+          opacity: isInViewProject ? 1 : 0,
+          transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s",
+        }}
+      >
         <img
           className="w-full h-full"
           src={FirstProjectImg}
