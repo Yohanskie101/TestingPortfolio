@@ -53,12 +53,26 @@ function Projectfirst() {
       </div>
 
       <div className="flex justify-between mb-5">
-        <div className="sub-heading-project text-xs sm:text-lg md:text-xl 2xl:text-2xl lg:text-2xl  ">
+        <div
+          className="sub-heading-project text-xs sm:text-lg md:text-xl 2xl:text-2xl lg:text-2xl"
+          ref={projectRef}
+          style={{
+            transform: isInViewProject ? "none" : "translateY(0px)",
+            opacity: isInViewProject ? 1 : 0,
+            transition: "all 0.3s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s",
+          }}
+        >
           Tracking Management System
         </div>
         <div
           className="read-heading-project text-xs sm:text-lg md:text-xl 2xl:text-2xl cursor-pointer"
           onClick={() => document.getElementById("my_modal_1").showModal()}
+          ref={projectRef}
+          style={{
+            transform: isInViewProject ? "none" : "translateX(0px)",
+            opacity: isInViewProject ? 1 : 0,
+            transition: "all 0.3s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s",
+          }}
         >
           Read the full details
         </div>
