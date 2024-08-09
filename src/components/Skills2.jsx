@@ -1,4 +1,4 @@
-import React, { useRef, useEffect } from "react";
+import React, { useRef, useEffect, useState } from "react";
 import { useInView } from "framer-motion";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
@@ -22,30 +22,39 @@ import SkillsTry from "./SkillsTry";
 gsap.registerPlugin(ScrollTrigger);
 
 const Skills2 = () => {
+  const [isSmallScreen, setIsSmallScreen] = useState(window.innerWidth <= 768);
+
   //Framer project
   const projectRef = useRef(null);
-  //Framer project check if it is in view
   const isInViewProject = useInView(projectRef, { once: true });
 
   //Framer skills1
   const skills1Ref = useRef(null);
-  //Framer skills1 check if it is in view
   const isInViewskills1 = useInView(skills1Ref, { once: true });
 
   //Framer skills2
   const skills2Ref = useRef(null);
-  //Framer skills2 check if it is in view
   const isInViewskills2 = useInView(skills2Ref, { once: true });
 
   //Framer skills3
   const skills3Ref = useRef(null);
-  //Framer skills3 check if it is in view
   const isInViewskills3 = useInView(skills3Ref, { once: true });
 
   useEffect(() => {
-    // Check if the screen width is greater than 768px
-    if (window.innerWidth > 768) {
-      // Create the ScrollTrigger and animation when the component mounts
+    const handleResize = () => {
+      setIsSmallScreen(window.innerWidth <= 768);
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    // Cleanup listener on component unmount
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
+  useEffect(() => {
+    if (!isSmallScreen) {
       const trigger = ScrollTrigger.create({
         trigger: ".wrapper-404",
         start: "top top",
@@ -61,13 +70,12 @@ const Skills2 = () => {
         },
       });
 
-      // Clean up all ScrollTriggers on component unmount
       return () => {
         trigger.kill();
         ScrollTrigger.getAll().forEach((st) => st.kill());
       };
     }
-  }, []);
+  }, [isSmallScreen]);
 
   return (
     <div className="skills2-container relative mt-20 lg:mt-0">
@@ -89,7 +97,11 @@ const Skills2 = () => {
             className="Skills-box box-div flex flex-col items-center font-for-intro-2 font-semibold"
             ref={skills1Ref}
             style={{
-              transform: isInViewskills1 ? "none" : "translateY(-200px)",
+              transform: isInViewskills1
+                ? "none"
+                : isSmallScreen
+                ? "translateX(-200px)"
+                : "translateY(-200px)",
               opacity: isInViewskills1 ? 1 : 0,
               transition: "all 0.5s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s",
             }}
@@ -130,9 +142,13 @@ const Skills2 = () => {
             className=" box-div flex flex-col items-center font-for-intro-2 font-semibold"
             ref={skills2Ref}
             style={{
-              transform: isInViewskills2 ? "none" : "translateY(100px)",
+              transform: isInViewskills2
+                ? "none"
+                : isSmallScreen
+                ? "translateX(-200px)"
+                : "translateY(100px)",
               opacity: isInViewskills2 ? 1 : 0,
-              transition: "all 1s cubic-bezier(0.17, 0.55, 0.55, 1) .2s",
+              transition: "all 1s cubic-bezier(0.17, 0.55, 0.55, 1) .5s",
             }}
           >
             <div className="flex justify-center font-for-intro-2 font-semibold ">
@@ -195,7 +211,11 @@ const Skills2 = () => {
             className="box-div flex flex-col items-center font-for-intro-2 font-semibold"
             ref={skills3Ref}
             style={{
-              transform: isInViewskills3 ? "none" : "translateY(-200px)",
+              transform: isInViewskills3
+                ? "none"
+                : isSmallScreen
+                ? "translateX(-200px)"
+                : "translateY(-200px)",
               opacity: isInViewskills3 ? 1 : 0,
               transition: "all 0.5s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s",
             }}
