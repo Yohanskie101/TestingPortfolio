@@ -42,7 +42,7 @@ function Projectsecond() {
         style={{
           transform: isInViewTitle ? "none" : "translateY(0px)",
           opacity: isInViewTitle ? 1 : 0,
-          transition: "all 0.1s ease 0.0s",
+          transition: "all 0.01s ease 0.0s",
         }}
       >
         Javah Catering Service
