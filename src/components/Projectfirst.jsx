@@ -15,17 +15,17 @@ function Projectfirst() {
   const projectRef = useRef(null);
 
   //Gsap Title Project
-  const titleRef = useRef(null);
+  const titleRef1 = useRef(null);
 
   //Framer project check if it is in view
   const isInViewProject = useInView(projectRef, { once: true });
 
   //Gsap Title Prrroject check if it is in view
-  const isInViewTitle = useInView(titleRef, { once: true });
+  const isInViewTitle1 = useInView(titleRef1, { once: true });
 
   //Gsap Who is Yohan
   useEffect(() => {
-    if (isInViewTitle) {
+    if (isInViewTitle1) {
       new SplitType("#my-title1", { types: "chars" });
 
       gsap.to(".char", {
@@ -35,17 +35,17 @@ function Projectfirst() {
         duration: 0.1,
       });
     }
-  }, [isInViewTitle]);
+  }, [isInViewTitle1]);
 
   return (
     <>
       <div
         className="Title-Project heading-project text-base xl:text-4xl lg:text-3xl sm:text-2xl leading-relaxed"
         id="my-title1"
-        ref={titleRef}
+        ref={titleRef1}
         style={{
-          transform: isInViewTitle ? "none" : "translateY(0px)",
-          opacity: isInViewTitle ? 1 : 0,
+          transform: isInViewTitle1 ? "none" : "translateY(0px)",
+          opacity: isInViewTitle1 ? 1 : 0,
           transition: "all 0.1s ease 0.0s",
         }}
       >
@@ -59,7 +59,7 @@ function Projectfirst() {
           style={{
             transform: isInViewProject ? "none" : "translateY(0px)",
             opacity: isInViewProject ? 1 : 0,
-            transition: "all 0.3s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s",
+            transition: "all 0.3s cubic-bezier(0.17, 0.55, 0.55, 1) 0.8s",
           }}
         >
           Tracking Management System
@@ -71,7 +71,7 @@ function Projectfirst() {
           style={{
             transform: isInViewProject ? "none" : "translateX(0px)",
             opacity: isInViewProject ? 1 : 0,
-            transition: "all 0.3s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s",
+            transition: "all 0.3s cubic-bezier(0.17, 0.55, 0.55, 1) 0.8s",
           }}
         >
           Read the full details
