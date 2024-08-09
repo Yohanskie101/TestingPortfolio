@@ -327,6 +327,7 @@ body {
   }
   .skills2-container {
     width: 100% !important;
+    height: 100% !important;
   }
   .skills-text {
     text-align: center !important;
