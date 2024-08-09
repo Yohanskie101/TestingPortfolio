@@ -130,9 +130,9 @@ const Skills2 = () => {
             className=" box-div flex flex-col items-center font-for-intro-2 font-semibold"
             ref={skills2Ref}
             style={{
-              transform: isInViewskills2 ? "none" : "translateY(400px)",
+              transform: isInViewskills2 ? "none" : "translateY(100px)",
               opacity: isInViewskills2 ? 1 : 0,
-              transition: "all 1s cubic-bezier(0.17, 0.55, 0.55, 1) 1s",
+              transition: "all 1s cubic-bezier(0.17, 0.55, 0.55, 1) .35s",
             }}
           >
             <div className="flex justify-center font-for-intro-2 font-semibold ">
