@@ -13,15 +13,15 @@ function Projectthird() {
   const isInViewProject = useInView(projectRef, { once: true });
 
   //Gsap Title Project
-  const titleRef = useRef(null);
+  const titleRef3 = useRef(null);
 
   //Gsap Title Prrroject check if it is in view
-  const isInViewTitle = useInView(titleRef, { once: true });
+  const isInViewTitle3 = useInView(titleRef3, { once: true });
 
   //Gsap Who is Yohan
   useEffect(() => {
-    if (isInViewTitle) {
-      new SplitType("#my-title", { types: "chars" });
+    if (isInViewTitle3) {
+      new SplitType("#my-title3", { types: "chars" });
 
       gsap.to(".char", {
         y: 0,
@@ -30,17 +30,17 @@ function Projectthird() {
         duration: 0.01,
       });
     }
-  }, [isInViewTitle]);
+  }, [isInViewTitle3]);
   return (
     <>
       <div
         className="Title-Project heading-project text-base xl:text-4xl lg:text-3xl sm:text-2xl leading-relaxed"
-        id="my-title"
-        ref={titleRef}
+        id="my-title3"
+        ref={titleRef3}
         style={{
-          transform: isInViewTitle ? "none" : "translateY(0px)",
-          opacity: isInViewTitle ? 1 : 0,
-          transition: "all 0.1s ease 0.0s",
+          transform: isInViewTitle3 ? "none" : "translateY(0px)",
+          opacity: isInViewTitle3 ? 1 : 0,
+          transition: "all 0.01s ease 0.0s",
         }}
       >
         Pic-A-Book

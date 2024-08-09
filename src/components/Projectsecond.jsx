@@ -15,15 +15,15 @@ function Projectsecond() {
   const isInViewProject = useInView(projectRef, { once: true });
 
   //Gsap Title Project
-  const titleRef = useRef(null);
+  const titleRef2 = useRef(null);
 
   //Gsap Title Prrroject check if it is in view
-  const isInViewTitle = useInView(titleRef, { once: true });
+  const isInViewTitle2 = useInView(titleRef2, { once: true });
 
   //Gsap Who is Yohan
   useEffect(() => {
-    if (isInViewTitle) {
-      new SplitType("#my-title", { types: "chars" });
+    if (isInViewTitle2) {
+      new SplitType("#my-title2", { types: "chars" });
 
       gsap.to(".char", {
         y: 0,
@@ -32,16 +32,16 @@ function Projectsecond() {
         duration: 0.01,
       });
     }
-  }, [isInViewTitle]);
+  }, [isInViewTitle2]);
   return (
     <>
       <div
         className="Title-Project heading-project text-base xl:text-4xl lg:text-3xl sm:text-2xl leading-relaxed"
-        id="my-title"
-        ref={titleRef}
+        id="my-title2"
+        ref={titleRef2}
         style={{
-          transform: isInViewTitle ? "none" : "translateY(0px)",
-          opacity: isInViewTitle ? 1 : 0,
+          transform: isInViewTitle2 ? "none" : "translateY(0px)",
+          opacity: isInViewTitle2 ? 1 : 0,
           transition: "all 0.01s ease 0.0s",
         }}
       >
