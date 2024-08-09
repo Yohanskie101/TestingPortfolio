@@ -3,7 +3,7 @@ import EmailPic from "../assets/mail.png";
 
 function ContactMe() {
   return (
-    <div className="container  w-full h-fit gap-7 mt-40 2xl:mt-56 xl:mt-56 lg:mt-44 md:mt-40 sm:mt-40">
+    <div className="container  w-full h-fit gap-7 mt-24 2xl:mt-56 xl:mt-56 lg:mt-44 md:mt-32 sm:mt-24">
       <div className="font-for-intro mb-5 2xl:mb-10 lg:mb-10 md:mb-10 sm:mb-10">
         Contact Me
       </div>

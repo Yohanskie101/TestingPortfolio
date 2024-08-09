@@ -6,7 +6,7 @@ import Projectthird from "../components/Projectthird";
 const Projects = () => {
   return (
     <div
-      className="container  w-full h-fit gap-7 mt-32 2xl:mt-56 xl:mt-56 lg:mt-44  sm:mt-32 
+      className="container  w-full h-fit gap-7 mt-24 2xl:mt-56 xl:mt-56 lg:mt-44  sm:mt-24
     "
       id="Proj-container"
     >
