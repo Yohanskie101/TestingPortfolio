@@ -12,13 +12,13 @@ import lng7 from "../assets/bootstrap.png";
 
 function Projectfirst() {
   //Framer project
-  const projectRef = useRef(null);
+  const projectRef1 = useRef(null);
 
   //Gsap Title Project
   const titleRef = useRef(null);
 
   //Framer project check if it is in view
-  const isInViewProject = useInView(projectRef, { once: true });
+  const isInViewProject1 = useInView(projectRef1, { once: true });
 
   //Gsap Title Prrroject check if it is in view
   const isInViewTitle = useInView(titleRef, { once: true });
@@ -44,7 +44,7 @@ function Projectfirst() {
         id="my-title"
         ref={titleRef}
         style={{
-          transform: isInViewTitle ? "none" : "translateY(-10px)",
+          transform: isInViewTitle ? "none" : "translateY(0px)",
           opacity: isInViewTitle ? 1 : 0,
           transition: "all 0.3s ease 0.0s",
         }}
@@ -55,10 +55,10 @@ function Projectfirst() {
       <div className="flex justify-between mb-5">
         <div
           className="sub-heading-project text-xs sm:text-lg md:text-xl 2xl:text-2xl lg:text-2xl"
-          ref={projectRef}
+          ref={projectRef1}
           style={{
-            transform: isInViewProject ? "none" : "translateY(0px)",
-            opacity: isInViewProject ? 1 : 0,
+            transform: isInViewProject1 ? "none" : "translateY(0px)",
+            opacity: isInViewProject1 ? 1 : 0,
             transition: "all 0.3s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s",
           }}
         >
@@ -67,10 +67,10 @@ function Projectfirst() {
         <div
           className="read-heading-project text-xs sm:text-lg md:text-xl 2xl:text-2xl cursor-pointer"
           onClick={() => document.getElementById("my_modal_1").showModal()}
-          ref={projectRef}
+          ref={projectRef1}
           style={{
-            transform: isInViewProject ? "none" : "translateX(0px)",
-            opacity: isInViewProject ? 1 : 0,
+            transform: isInViewProject1 ? "none" : "translateX(0px)",
+            opacity: isInViewProject1 ? 1 : 0,
             transition: "all 0.3s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s",
           }}
         >
@@ -80,10 +80,10 @@ function Projectfirst() {
 
       <div
         className="Project-img-cont w-full mb-5 h-1/2"
-        ref={projectRef}
+        ref={projectRef1}
         style={{
-          transform: isInViewProject ? "none" : "translateY(70px)",
-          opacity: isInViewProject ? 1 : 0,
+          transform: isInViewProject1 ? "none" : "translateY(70px)",
+          opacity: isInViewProject1 ? 1 : 0,
           transition: "all 0.3s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s",
         }}
       >

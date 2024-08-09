@@ -40,7 +40,7 @@ function Projectsecond() {
         id="my-title"
         ref={titleRef}
         style={{
-          transform: isInViewTitle ? "none" : "translateY(-30px)",
+          transform: isInViewTitle ? "none" : "translateY(0px)",
           opacity: isInViewTitle ? 1 : 0,
           transition: "all 0.1s ease 0.0s",
         }}
