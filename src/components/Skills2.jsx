@@ -24,9 +24,23 @@ gsap.registerPlugin(ScrollTrigger);
 const Skills2 = () => {
   //Framer project
   const projectRef = useRef(null);
-
   //Framer project check if it is in view
   const isInViewProject = useInView(projectRef, { once: true });
+
+  //Framer skills1
+  const skills1Ref = useRef(null);
+  //Framer skills1 check if it is in view
+  const isInViewskills1 = useInView(skills1Ref, { once: true });
+
+  //Framer skills2
+  const skills2Ref = useRef(null);
+  //Framer skills2 check if it is in view
+  const isInViewskills2 = useInView(skills2Ref, { once: true });
+
+  //Framer skills3
+  const skills3Ref = useRef(null);
+  //Framer skills3 check if it is in view
+  const isInViewskills3 = useInView(skills3Ref, { once: true });
 
   useEffect(() => {
     // Check if the screen width is greater than 768px
@@ -71,7 +85,15 @@ const Skills2 = () => {
         </div>
         <div className="wrapper-container flex lg:gap-12">
           {/* 1st Box */}
-          <div className="box-div flex flex-col items-center font-for-intro-2 font-semibold">
+          <div
+            className="Skills-box box-div flex flex-col items-center font-for-intro-2 font-semibold"
+            ref={skills1Ref}
+            style={{
+              transform: isInViewskills1 ? "none" : "translateY(-200px)",
+              opacity: isInViewskills1 ? 1 : 0,
+              transition: "all 0.5s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s",
+            }}
+          >
             <div className="flex justify-center font-for-intro-2 font-semibold">
               Programming Languages
             </div>
@@ -104,7 +126,15 @@ const Skills2 = () => {
           </div>
 
           {/* 2nd Box */}
-          <div className="box-div flex flex-col items-center font-for-intro-2 font-semibold">
+          <div
+            className=" box-div flex flex-col items-center font-for-intro-2 font-semibold"
+            ref={skills2Ref}
+            style={{
+              transform: isInViewskills2 ? "none" : "translateY(400px)",
+              opacity: isInViewskills2 ? 1 : 0,
+              transition: "all 1s cubic-bezier(0.17, 0.55, 0.55, 1) 1s",
+            }}
+          >
             <div className="flex justify-center font-for-intro-2 font-semibold ">
               Frameworks / Libraries
             </div>
@@ -161,7 +191,15 @@ const Skills2 = () => {
           </div>
 
           {/* 3rd Box */}
-          <div className="box-div flex flex-col items-center font-for-intro-2 font-semibold">
+          <div
+            className="box-div flex flex-col items-center font-for-intro-2 font-semibold"
+            ref={skills3Ref}
+            style={{
+              transform: isInViewskills3 ? "none" : "translateY(-200px)",
+              opacity: isInViewskills3 ? 1 : 0,
+              transition: "all 0.5s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s",
+            }}
+          >
             <div className="flex justify-center font-for-intro-2 font-semibold ">
               Technologies / Tools
             </div>
