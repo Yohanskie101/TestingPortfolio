@@ -49,12 +49,12 @@ const Skills2 = () => {
   }, []);
 
   return (
-    <div className="skills2-container relative ">
+    <div className="skills2-container relative mt-20 lg:mt-0">
       <section className="wrapper-404 lg:pt-40">
         <div className="skills-text font-for-intro relative block">Skills</div>
-        <div className="wrapper-container flex gap-10">
+        <div className="wrapper-container flex lg:gap-12">
           {/* 1st Box */}
-          <div className="flex flex-col items-center font-for-intro-2 font-semibold">
+          <div className="box-div flex flex-col items-center font-for-intro-2 font-semibold">
             <div className="flex justify-center font-for-intro-2 font-semibold">
               Programming Languages
             </div>
@@ -87,7 +87,7 @@ const Skills2 = () => {
           </div>
 
           {/* 2nd Box */}
-          <div className="flex flex-col items-center font-for-intro-2 font-semibold">
+          <div className="box-div flex flex-col items-center font-for-intro-2 font-semibold">
             <div className="flex justify-center font-for-intro-2 font-semibold ">
               Frameworks / Libraries
             </div>
@@ -144,7 +144,7 @@ const Skills2 = () => {
           </div>
 
           {/* 3rd Box */}
-          <div className="flex flex-col items-center font-for-intro-2 font-semibold">
+          <div className="box-div flex flex-col items-center font-for-intro-2 font-semibold">
             <div className="flex justify-center font-for-intro-2 font-semibold ">
               Technologies / Tools
             </div>
