@@ -1,5 +1,6 @@
 import React, { useRef, useEffect } from "react";
 import { useInView } from "framer-motion";
+
 import FirstProjectImg from "../assets/pj4-img.png";
 import lng1 from "../assets/php.png";
 import lng2 from "../assets/html-5.png";
@@ -37,7 +38,7 @@ function Projectfirst() {
         className="Project-img-cont w-full mb-5 h-1/2"
         ref={projectRef}
         style={{
-          transform: isInViewProject ? "none" : "translateY(100px)",
+          transform: isInViewProject ? "none" : "translateY(70px)",
           opacity: isInViewProject ? 1 : 0,
           transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s",
         }}
