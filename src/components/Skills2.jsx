@@ -1,4 +1,5 @@
-import React, { useEffect } from "react";
+import React, { useRef, useEffect } from "react";
+import { useInView } from "framer-motion";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import phpimg from "../assets/php.png";
@@ -21,6 +22,12 @@ import SkillsTry from "./SkillsTry";
 gsap.registerPlugin(ScrollTrigger);
 
 const Skills2 = () => {
+  //Framer project
+  const projectRef = useRef(null);
+
+  //Framer project check if it is in view
+  const isInViewProject = useInView(projectRef, { once: true });
+
   useEffect(() => {
     // Check if the screen width is greater than 768px
     if (window.innerWidth > 768) {
@@ -51,7 +58,17 @@ const Skills2 = () => {
   return (
     <div className="skills2-container relative mt-20 lg:mt-0">
       <section className="wrapper-404 lg:pt-40">
-        <div className="skills-text font-for-intro relative block">Skills</div>
+        <div
+          className="skills-text font-for-intro relative block"
+          ref={projectRef}
+          style={{
+            transform: isInViewProject ? "none" : "translateX(-100px)",
+            opacity: isInViewProject ? 1 : 0,
+            transition: "all 0.5s cubic-bezier(0.17, 0.55, 0.55, 1) 0.1s",
+          }}
+        >
+          Skills
+        </div>
         <div className="wrapper-container flex lg:gap-12">
           {/* 1st Box */}
           <div className="box-div flex flex-col items-center font-for-intro-2 font-semibold">

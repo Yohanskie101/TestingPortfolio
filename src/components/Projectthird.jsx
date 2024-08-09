@@ -1,5 +1,6 @@
 import React, { useRef, useEffect } from "react";
 import { useInView } from "framer-motion";
+import { gsap } from "gsap";
 import ThirdProjectImg from "../assets/pj1-img.png";
 import lng1 from "../assets/vbnet.png";
 import lng7 from "../assets/microsoftaccess.png";
@@ -10,9 +11,38 @@ function Projectthird() {
 
   //Framer project
   const isInViewProject = useInView(projectRef, { once: true });
+
+  //Gsap Title Project
+  const titleRef = useRef(null);
+
+  //Gsap Title Prrroject check if it is in view
+  const isInViewTitle = useInView(titleRef, { once: true });
+
+  //Gsap Who is Yohan
+  useEffect(() => {
+    if (isInViewTitle) {
+      new SplitType("#my-title", { types: "chars" });
+
+      gsap.to(".char", {
+        y: 0,
+        stagger: 0.02,
+        delay: 0.0,
+        duration: 0.01,
+      });
+    }
+  }, [isInViewTitle]);
   return (
     <>
-      <div className="heading-project text-base xl:text-4xl lg:text-3xl sm:text-2xl leading-relaxed">
+      <div
+        className="Title-Project heading-project text-base xl:text-4xl lg:text-3xl sm:text-2xl leading-relaxed"
+        id="my-title"
+        ref={titleRef}
+        style={{
+          transform: isInViewTitle ? "none" : "translateY(-60px)",
+          opacity: isInViewTitle ? 1 : 0,
+          transition: "all 0.1s ease 0.0s",
+        }}
+      >
         Pic-A-Book
       </div>
 
@@ -34,7 +64,7 @@ function Projectthird() {
         style={{
           transform: isInViewProject ? "none" : "translateY(70px)",
           opacity: isInViewProject ? 1 : 0,
-          transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s",
+          transition: "all 0.3s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s",
         }}
       >
         <img

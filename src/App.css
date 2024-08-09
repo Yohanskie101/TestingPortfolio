@@ -217,6 +217,9 @@ body {
   color: #7dc172;
   clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
 }
+.Title-Project {
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+}
 .char {
   transform: translateY(115px);
   transition: transform 0.5s;
